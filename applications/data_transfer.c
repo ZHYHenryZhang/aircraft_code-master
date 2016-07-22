@@ -394,8 +394,18 @@ void ANO_DT_Data_Receive_Anl(u8 *data_buf,u8 num)
 		{
 			soft_landing_flag=1;//软着陆代码在此处；
 		}
+		else if(*(data_buf+4)==0X04)
+		{
+			landing_flag=2;
+			//Landing();//降落代码在此处；
+		}
+		else if(*(data_buf+4)==0X05)
+		{
+			landing_flag=3;
+			//Landing();//降落代码在此处；
+		}
 	}
-	
+
 	if(*(data_buf+2)==0X06)//修改参数的函数在此处
 	{
 		thr_take_off = (vs16)(*(data_buf+4)<<8)|*(data_buf+5) ;

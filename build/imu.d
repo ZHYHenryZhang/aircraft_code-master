@@ -2,7 +2,7 @@
 .\build\imu.o: applications\imu.h
 .\build\imu.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\imu.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\imu.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\imu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\imu.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\imu.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\imu.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -24,7 +24,7 @@
 .\build\imu.o: .\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h
 .\build\imu.o: applications\parameter.h
 .\build\imu.o: applications\mymath.h
-.\build\imu.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h
+.\build\imu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\build\imu.o: applications\include.h
 .\build\imu.o: applications\scheduler.h
 .\build\imu.o: .\drivers\time.h
@@ -34,6 +34,6 @@
 .\build\imu.o: applications\data_transfer.h
 .\build\imu.o: applications\height_ctrl.h
 .\build\imu.o: .\drivers\ak8975.h
-.\build\imu.o: H:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\build\imu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\build\imu.o: applications\mymath.h
 .\build\imu.o: applications\filter.h

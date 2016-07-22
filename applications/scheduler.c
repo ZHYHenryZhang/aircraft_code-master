@@ -104,7 +104,6 @@ void Duty_50ms()
 	LED_Duty();								//LED任务
 	Ultra_Duty();
 	Safety_Belt();//限高降落
-	Landing();
 }
 
 

@@ -2,7 +2,7 @@
 .\build\pwm_out.o: drivers\pwm_out.h
 .\build\pwm_out.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\pwm_out.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\pwm_out.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\pwm_out.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\pwm_out.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\pwm_out.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\pwm_out.o: .\Libraries\CMSIS\Include\core_cm4_simd.h

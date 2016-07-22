@@ -9,6 +9,7 @@
 
 #include "ctrl.h"
 #include "height_ctrl.h"
+#include "myctrl.h"
 
 ctrl_t ctrl_1;
 ctrl_t ctrl_2;
@@ -206,6 +207,10 @@ void Thr_Ctrl(float T)
 		//land();
 	}*/
 	My_Height_Ctrl(T,thr);
+	if(landing_flag!=0)
+	{
+			Landing(thr);
+	}
 	//thr_value = Thr_Weight *height_ctrl_out;   //原程序
   thr_value = height_ctrl_out;//我的程序
 	#else

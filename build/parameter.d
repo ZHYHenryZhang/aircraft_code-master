@@ -2,7 +2,7 @@
 .\build\parameter.o: applications\include.h
 .\build\parameter.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\parameter.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\parameter.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\parameter.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\parameter.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\parameter.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\parameter.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -32,11 +32,12 @@
 .\build\parameter.o: applications\height_ctrl.h
 .\build\parameter.o: .\drivers\mpu6050.h
 .\build\parameter.o: .\drivers\ak8975.h
-.\build\parameter.o: H:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\build\parameter.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\build\parameter.o: applications\ctrl.h
 .\build\parameter.o: .\drivers\pwm_out.h
 .\build\parameter.o: applications\rc.h
 .\build\parameter.o: applications\imu.h
 .\build\parameter.o: applications\mymath.h
-.\build\parameter.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h
-.\build\parameter.o: H:\keil\ARM\ARMCC\Bin\..\include\string.h
+.\build\parameter.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\build\parameter.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\build\parameter.o: applications\myctrl.h

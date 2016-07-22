@@ -2,7 +2,7 @@
 .\build\myctrl.o: applications\myctrl.h
 .\build\myctrl.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\myctrl.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\myctrl.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\myctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\myctrl.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\myctrl.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\myctrl.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -35,7 +35,7 @@
 .\build\myctrl.o: applications\rc.h
 .\build\myctrl.o: applications\imu.h
 .\build\myctrl.o: applications\mymath.h
-.\build\myctrl.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h
+.\build\myctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\build\myctrl.o: .\drivers\mpu6050.h
 .\build\myctrl.o: applications\ctrl.h
 .\build\myctrl.o: .\drivers\ultrasonic.h

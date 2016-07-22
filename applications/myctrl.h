@@ -13,15 +13,16 @@
 void take_off(void);
 void land(void);
 */
+#define EXPECT_LANDING_SPEED -10
 
 typedef struct{
 	float kp;
 	float ki;
 	float kd;
-}_height_direct_ctrl;
+}_PID;
 
 //void Take_off();
-void Landing(void);
+void Landing(float thr);
 //void Height_Direct_Ctrl();
 void myctrl_PID_Init(void);
 void Safety_Belt(void);
@@ -32,7 +33,7 @@ static int thr_height_direct_ctrl=1680;
 static int thr_soft_landing=1620;
 
 extern u8 take_off_flag,landing_flag,height_ctrl_flag,soft_landing_flag,landing_done_flag;
-static _height_direct_ctrl thr_height_direct_ctrl_pid;
+extern _PID thr_height_direct_ctrl_pid,landing_speed_pid;
 
 
 #endif

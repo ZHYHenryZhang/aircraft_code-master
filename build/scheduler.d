@@ -2,7 +2,7 @@
 .\build\scheduler.o: applications\scheduler.h
 .\build\scheduler.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\scheduler.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\scheduler.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\scheduler.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\scheduler.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\scheduler.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -32,12 +32,12 @@
 .\build\scheduler.o: applications\height_ctrl.h
 .\build\scheduler.o: .\drivers\mpu6050.h
 .\build\scheduler.o: .\drivers\ak8975.h
-.\build\scheduler.o: H:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\build\scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\build\scheduler.o: .\drivers\led.h
 .\build\scheduler.o: applications\rc.h
 .\build\scheduler.o: applications\imu.h
 .\build\scheduler.o: applications\mymath.h
-.\build\scheduler.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h
+.\build\scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\build\scheduler.o: applications\ctrl.h
 .\build\scheduler.o: .\drivers\pwm_out.h
 .\build\scheduler.o: .\drivers\ultrasonic.h

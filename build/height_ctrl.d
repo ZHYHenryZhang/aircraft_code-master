@@ -2,7 +2,7 @@
 .\build\height_ctrl.o: applications\include.h
 .\build\height_ctrl.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\height_ctrl.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\height_ctrl.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\height_ctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\height_ctrl.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\height_ctrl.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\height_ctrl.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -38,5 +38,5 @@
 .\build\height_ctrl.o: applications\rc.h
 .\build\height_ctrl.o: applications\imu.h
 .\build\height_ctrl.o: applications\mymath.h
-.\build\height_ctrl.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h
+.\build\height_ctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\build\height_ctrl.o: .\drivers\mpu6050.h

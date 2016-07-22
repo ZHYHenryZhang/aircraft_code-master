@@ -6,6 +6,7 @@
 #include "ultrasonic.h"
 #include "pwm_in.h"
 #include "rc.h"
+#include "ctrl.h"
 
 #define TAKE_OFF_HEIGHT 700
 /*void take_off()
@@ -59,20 +60,20 @@ u8 height_ctrl_count=0;
 u8 thr_landing_count=0;
 u16 landing_done_count=0;
 u16 safety_belt_count=0;
-u8 ultra_buffer_counter=0;
-u16 ultra_buffer[4]={0,0,0,0};
-float soft_landing_k=0.025;
-float reference_speed=0;
-float REFERENCE_SPEED_K=8;
-float SOFT_LANDING_MAX_SPEED=-200.0f;
-s16 motor_test[4]={1000,1000,1000,1000};
+u8 ultra_distance_fixed_count=0;
+float landing_speed_error=0,landing_speed_p=0,landing_speed_i=0,landing_speed_d=0,landing_speed_preerror=0,landing_speed_pid_out=0;
+_PID thr_height_direct_ctrl_pid={0.025,0,0},landing_speed_pid={0.1,0.005,1};
 
 //HZ：自己的参数初始化
 void myctrl_PID_Init(void)
 {
-	thr_height_direct_ctrl_pid.kp=0.025;
-	thr_height_direct_ctrl_pid.ki=0;
-	thr_height_direct_ctrl_pid.kd=0;
+	//thr_height_direct_ctrl_pid.kp=0.025;
+	//thr_height_direct_ctrl_pid.ki=0;
+	//thr_height_direct_ctrl_pid.kd=0;
+	landing_speed_pid.kp=1.0f*pid_setup.groups.hc_sp.kp;
+	landing_speed_pid.ki=1.0f*pid_setup.groups.hc_sp.ki;
+	landing_speed_pid.kd=1.0f*pid_setup.groups.hc_sp.kd;
+	
 }
 
 //起飞，油门到高点直到离开地面一定高度（后进入height_direct_ctrl）
@@ -98,7 +99,7 @@ void Take_off(void)
 }
 
 
-void Landing(void)
+void Landing(float thr)
 {
 	//定油门降落
 	if(landing_flag==1)
@@ -107,8 +108,8 @@ void Landing(void)
 		height_ctrl_flag=0;
 		if(ultra_distance>400)
 		{
-			thr_landing_count++;
-			thr_landing_count=thr_landing_count%2;
+			//thr_landing_count++;
+			//thr_landing_count=thr_landing_count%2;
 			thr_landing=1670-ultra_distance*4/7-ultra_delta;
 		}
 		else
@@ -137,6 +138,18 @@ void Landing(void)
 			fly_ready=0;
 			height_ctrl_flag_star=0;//不启用mf定高
 		}
+	}
+	
+	//匀速降落
+	if(landing_flag==3)
+	{
+		landing_speed_error=EXPECT_LANDING_SPEED-ultra_delta;
+		landing_speed_p=landing_speed_pid.kp*landing_speed_error;
+		landing_speed_i+=landing_speed_pid.ki*landing_speed_error;
+		landing_speed_d=landing_speed_pid.kd*(landing_speed_error-landing_speed_preerror);
+		landing_speed_pid_out=landing_speed_p+landing_speed_i+landing_speed_d;
+		height_ctrl_out=thr+landing_speed_pid_out;
+		landing_speed_preerror=landing_speed_error;
 	}
 }
 
@@ -175,14 +188,19 @@ void Safety_Belt(void)
 		}
 		
 		//超声失效保护程序(未启用)
-		ultra_buffer_counter++;
-		ultra_buffer_counter%=4;
-		ultra_buffer[ultra_buffer_counter]=ultra_distance;
 		if(height_ctrl_flag_star||take_off_flag||height_ctrl_flag)
-			if(ultra_buffer[0]==ultra_buffer[1]&&ultra_buffer[1]==ultra_buffer[2]&&ultra_buffer[2]==ultra_buffer[3])
+		{
+			if(ultra_delta==0)
 				{
+					ultra_distance_fixed_count++;
+					if(ultra_distance_fixed_count==16)
+					{
 					//fly_ready=0;
+					}
 				}
+		}
+		else
+			ultra_distance_fixed_count=0;
 }
 
 

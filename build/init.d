@@ -2,7 +2,7 @@
 .\build\init.o: applications\include.h
 .\build\init.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\init.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\init.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\init.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\init.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\init.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -38,7 +38,7 @@
 .\build\init.o: applications\rc.h
 .\build\init.o: applications\imu.h
 .\build\init.o: applications\mymath.h
-.\build\init.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h
+.\build\init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\build\init.o: .\drivers\ak8975.h
-.\build\init.o: H:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\build\init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\build\init.o: .\drivers\ultrasonic.h

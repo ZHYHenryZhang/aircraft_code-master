@@ -2,7 +2,7 @@
 .\build\led.o: drivers\led.h
 .\build\led.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\led.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\led.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\led.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\led.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\led.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -33,4 +33,4 @@
 .\build\led.o: .\applications\height_ctrl.h
 .\build\led.o: .\applications\rc.h
 .\build\led.o: drivers\ak8975.h
-.\build\led.o: H:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\build\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

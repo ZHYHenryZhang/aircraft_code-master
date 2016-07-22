@@ -47,6 +47,7 @@ void RC_Duty( float T , u16 tmp16_CH[CH_NUM] )
 	u16 CH_TMP[CH_NUM];
 	static u16 Mapped_CH[CH_NUM];
 
+	/*//////////////////////////////////////
 	if( NS == 1 )
 	{
 		CH_Mapping_Fun(tmp16_CH,Mapped_CH);
@@ -55,6 +56,11 @@ void RC_Duty( float T , u16 tmp16_CH[CH_NUM] )
 	{
 		CH_Mapping_Fun(RX_CH,Mapped_CH);
 	}
+	*//////////////////////////////////////
+	Mapped_CH[0]=tmp16_CH[0];
+	Mapped_CH[1]=tmp16_CH[1];
+	Mapped_CH[2]=RX_CH[2];
+	Mapped_CH[3]=tmp16_CH[3];
 	
 	for( i = 0;i < CH_NUM ; i++ )
 	{

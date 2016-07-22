@@ -2,7 +2,7 @@
 .\build\data_transfer.o: applications\data_transfer.h
 .\build\data_transfer.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\data_transfer.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\data_transfer.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\data_transfer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\data_transfer.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\data_transfer.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\data_transfer.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -27,7 +27,7 @@
 .\build\data_transfer.o: applications\imu.h
 .\build\data_transfer.o: applications\parameter.h
 .\build\data_transfer.o: applications\mymath.h
-.\build\data_transfer.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h
+.\build\data_transfer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\build\data_transfer.o: .\drivers\mpu6050.h
 .\build\data_transfer.o: .\applications\include.h
 .\build\data_transfer.o: .\applications\scheduler.h
@@ -35,7 +35,7 @@
 .\build\data_transfer.o: .\applications\init.h
 .\build\data_transfer.o: .\drivers\pwm_in.h
 .\build\data_transfer.o: .\drivers\ak8975.h
-.\build\data_transfer.o: H:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\build\data_transfer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\build\data_transfer.o: applications\rc.h
 .\build\data_transfer.o: applications\ctrl.h
 .\build\data_transfer.o: .\drivers\pwm_out.h

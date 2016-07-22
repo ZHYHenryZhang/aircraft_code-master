@@ -2,7 +2,7 @@
 .\build\i2c_soft.o: drivers\i2c_soft.h
 .\build\i2c_soft.o: .\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\build\i2c_soft.o: .\Libraries\CMSIS\Include\core_cm4.h
-.\build\i2c_soft.o: H:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\i2c_soft.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\i2c_soft.o: .\Libraries\CMSIS\Include\core_cmInstr.h
 .\build\i2c_soft.o: .\Libraries\CMSIS\Include\core_cmFunc.h
 .\build\i2c_soft.o: .\Libraries\CMSIS\Include\core_cm4_simd.h
